@@ -1,0 +1,232 @@
+@import url('https://fonts.googleapis.com/css?family=Josefin+Sans:300,400,600&display=swap');
+
+:root {
+    --color-desaturatedred: hsl(0, 36%, 70%);
+    --color-softred: hsl(0, 93%, 68%);
+    --color-darkred: hsl(0, 6%, 24%);
+    --color-black: #000000;
+    --gradient-1: linear-gradient(135deg,hsl(0, 0%, 100%),hsl(0, 100%, 98%));
+    --gradient-2: linear-gradient(135deg,hsl(0, 80%, 86%),hsl(0, 74%, 74%));
+
+}
+
+
+/*Global Styles Starts*/
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 10px;
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 1.6rem;
+}
+/*Global Styles Ends*/
+
+.main {
+    display: flex;
+    max-width: 130rem;
+    width: 100%;
+    margin: auto;
+}
+
+.main__header {
+    width: 60vw;
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    padding: 5rem 15rem;
+    background: var(--gradient-1) no-repeat;
+    position: relative;
+    z-index: 0;
+    padding-right: 18rem;
+}
+
+.main__header::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background: url(/images/bg-pattern-desktop.svg) no-repeat left;
+    z-index: -1;
+}
+
+.main__hero {
+    width: 40vw;
+    height: 80vh;
+}
+
+.hero__img-desktop {
+    height: 100%;
+    width: 100%;
+    background: url(/images/hero-desktop.jpg) no-repeat;
+}
+
+.hero__img-mobile {
+    display: none;
+}
+
+.cta {
+    margin-top: 9rem;
+}
+
+.cta__coming-soon {
+    display: flex;
+    flex-direction: column;
+    font-size: 5rem;
+    text-transform: uppercase;
+    line-height: 5.5rem;
+    letter-spacing: 1.2rem;
+    margin-bottom: 2rem;
+    
+}
+
+.cta__coming-soon-red {
+    color: var(--color-desaturatedred);
+    font-weight: 300;
+}
+
+.cta__text {
+    color: var(--color-desaturatedred);
+    font-size: 1.4rem;
+    line-height: 2.3rem;
+    margin-bottom: 3rem;
+}
+
+.cta__email {
+    border: .1rem solid var(--color-desaturatedred);
+    border-radius: 2rem;
+    height: 4.5rem;
+    padding-left: 2rem;
+    width: 100%;
+    margin-right: -6rem;
+    outline: none;
+    background: transparent;
+}
+
+.error-border {
+    border: 0.3rem solid var(--color-softred);
+}
+
+.cta__email::placeholder {
+    color: var(--color-desaturatedred);
+    opacity: 0.6;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+.cta__form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn {
+    border: none;
+    border-radius: 2rem;
+    height: 4.5rem;
+    width: 9rem;
+    background: var(--gradient-2);
+    box-shadow: 0px 20px 60px 0px rgba(0,0,0,0.5);
+}
+
+.btn:focus {
+    outline: none;
+}
+
+.btn__icon {
+    background: url(/images/icon-arrow.svg) no-repeat center;
+    background-size: contain;
+    display: inline-block;
+    cursor: pointer;
+    height: 2rem;
+    width: 2rem;
+}
+
+#error-icon {
+    background: url(/images/icon-error.svg) no-repeat center;
+    display: none;
+    height: 2rem;
+    width: 2rem;
+    border-radius: 50%;
+    margin-right: 0.7rem;
+}
+
+#error-message {
+    margin-top: 1rem;
+    padding-left: 2rem;
+    font-size: 1.3rem;
+    color: var(--color-softred);
+    display: none;
+}
+
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
+
+@media only screen and (max-width: 37.5rem){
+    .main {
+        display: block;
+        padding: 0;
+        margin: 0;
+        width: 100%;
+    }    
+    
+    .main__header {
+        flex-direction: column;
+        width: 100vw;
+        height: 100vh;
+        padding: 0;
+    }
+
+    .main__header header {
+        padding: 2rem 3rem;
+    }
+
+    .main__header header img {
+        height: 2rem;
+    }
+
+    .hero__img-mobile {
+        display: block;
+        height: 100%;
+        width: 100vw;
+        background: url(/images/hero-mobile.jpg) no-repeat;
+    }
+
+    .hero__img-desktop {
+        display: none;
+    }
+
+    .cta {
+        margin-top: 2rem;
+        padding: 3rem 3rem;
+        margin-bottom: 6rem;
+    }
+
+    .cta__coming-soon {
+        justify-content: center;
+        align-items: center;
+        font-size: 4rem;
+        line-height: 4.5rem;
+        letter-spacing: 1rem;
+        margin-bottom: 2rem;
+    }
+
+    .cta__text {
+        font-size: 1.2rem;
+        text-align: center;
+    }
+
+    .btn {
+        width: 6rem;
+    }
+}
