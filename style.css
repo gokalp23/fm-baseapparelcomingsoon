@@ -209,7 +209,7 @@ body {
         background-size: contain;
     }
 
-    .hero__img-desktop {
+    .main__hero {
         display: none;
     }
 
