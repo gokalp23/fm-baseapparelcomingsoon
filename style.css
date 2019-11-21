@@ -32,18 +32,16 @@ body {
 /*Global Styles Ends*/
 
 .main {
-    display: flex;
-    max-width: 130rem;
-    width: 100%;
-    margin: auto;
+    display: flex;    
+    width: 100%;   
 }
 
 .main__header {
     width: 60vw;
-    height: 80vh;
+    height: 100vh;
     display: flex;
     flex-direction: column;
-    padding: 5rem 15rem;
+    padding: 5rem 17rem;
     background: var(--gradient-1) no-repeat;
     position: relative;
     z-index: 0;
@@ -57,19 +55,21 @@ body {
     top: 0;
     height: 100%;
     width: 100%;
-    background: url(/images/bg-pattern-desktop.svg) no-repeat left;
+    background: url(/images/bg-pattern-desktop.svg) no-repeat;
+    background-size: cover;
     z-index: -1;
 }
 
 .main__hero {
     width: 40vw;
-    height: 80vh;
+    height: 100vh;
 }
 
 .hero__img-desktop {
     height: 100%;
     width: 100%;
     background: url(/images/hero-desktop.jpg) no-repeat;
+    background-size: cover;
 }
 
 .hero__img-mobile {
@@ -77,16 +77,17 @@ body {
 }
 
 .cta {
-    margin-top: 9rem;
+    margin-top:18rem;
+    width: 80%;
 }
 
 .cta__coming-soon {
     display: flex;
     flex-direction: column;
-    font-size: 5rem;
+    font-size: 6rem;
     text-transform: uppercase;
-    line-height: 5.5rem;
-    letter-spacing: 1.2rem;
+    line-height: 7rem;
+    letter-spacing: 1.6rem;
     margin-bottom: 2rem;
     
 }
@@ -98,9 +99,9 @@ body {
 
 .cta__text {
     color: var(--color-desaturatedred);
-    font-size: 1.4rem;
+    font-size: 1.5rem;
     line-height: 2.3rem;
-    margin-bottom: 3rem;
+    margin-bottom: 4rem;
 }
 
 .cta__email {
@@ -214,6 +215,7 @@ body {
         margin-top: 2rem;
         padding: 3rem 3rem;
         margin-bottom: 6rem;
+        width: 100%;
     }
 
     .cta__coming-soon {
